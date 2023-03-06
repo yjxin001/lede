@@ -33,7 +33,18 @@
    mkisofs msmtp nano ninja-build p7zip p7zip-full patch pkgconf python2.7 python3 python3-pip libpython3-dev qemu-utils \
    rsync scons squashfs-tools subversion swig texinfo uglifyjs upx-ucl unzip vim wget xmlto xxd zlib1g-dev
    ```
+#####
 
+需使用代理，http协议和socket协议的配置分别如下，以8080端口为例：
+
+# http
+#git config --global http.https://github.com.proxy http://127.0.0.1:8080
+#git config --global https.https://github.com.proxy https://127.0.0.1:8080
+
+# socket
+#git config --global http.proxy 'socks5://127.0.0.1:8080'
+#git config --global https.proxy 'socks5://127.0.0.1:8080'
+#####
 3. 下载源代码，更新 feeds 并选择配置
 
    ```bash
