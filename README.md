@@ -22,7 +22,7 @@
 
 1. 首先装好 Linux 系统，推荐 Debian 11 或 Ubuntu LTS
 
-   墙内需使用代理，http协议和socket协议的配置分别如下，以8080端口为例：
+   墙内需使用全局代理，http协议和socket协议的配置分别如下，以8080端口为例：
 
     http代理设置
     
@@ -35,6 +35,8 @@
     git config --global http.proxy 'socks5://127.0.0.1:8080'
     
     git config --global https.proxy 'socks5://127.0.0.1:8080'
+    
+    仔细观察:发现error(-110);error(-54);download failed等等,请重新做一遍.
 
 2. 安装编译依赖
 
