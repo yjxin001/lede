@@ -17,9 +17,23 @@
 2. 国内用户编译前最好准备好梯子
 3. 默认登陆IP 192.168.1.1 密码 password
 
+
 ## 编译命令
 
 1. 首先装好 Linux 系统，推荐 Debian 11 或 Ubuntu LTS
+1.1.墙内需使用代理，http协议和socket协议的配置分别如下，以8080端口为例：
+
+    http代理设置
+    
+    git config --global http.https://github.com.proxy http://127.0.0.1:8080
+
+    git config --global https.https://github.com.proxy https://127.0.0.1:8080
+
+   socket代理设置
+   
+    git config --global http.proxy 'socks5://127.0.0.1:8080'
+    
+    git config --global https.proxy 'socks5://127.0.0.1:8080 
 
 2. 安装编译依赖
 
@@ -34,20 +48,6 @@
    rsync scons squashfs-tools subversion swig texinfo uglifyjs upx-ucl unzip vim wget xmlto xxd zlib1g-dev
    ```
 
-
-2.1. 墙内需使用代理，http协议和socket协议的配置分别如下，以8080端口为例：
-
-    http代理设置
-    
-    git config --global http.https://github.com.proxy http://127.0.0.1:8080
-
-    git config --global https.https://github.com.proxy https://127.0.0.1:8080
-
-   socket代理设置
-   
-    git config --global http.proxy 'socks5://127.0.0.1:8080'
-    
-    git config --global https.proxy 'socks5://127.0.0.1:8080'
 
 3. 下载源代码，更新 feeds 并选择配置
 
