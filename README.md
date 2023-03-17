@@ -36,7 +36,12 @@
     
     git config --global https.proxy 'socks5://127.0.0.1:8080'
     
-    仔细观察:发现error(-110);error(-54);download failed等等,请重新做一遍.
+    仔细观察:发现error(-110);error(-54);download failed等等,请
+    
+    make distclear
+    ./scripts/feeds update -a
+    ./scripts/feeds install -a
+    
 
 2. 安装编译依赖
 
